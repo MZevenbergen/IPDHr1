@@ -28,10 +28,10 @@ def move(my_history, their_history, my_score, their_score):
     B = 0
     if len(my_history) == 0:
         return 'c'
-    elif their_history[-1] == 'b' and B == 0:
+    elif their_history[-1] == 'b' and B <= 2:
         B = B + 1
         return 'b'
-    elif B > 0:
+    elif B > 2:
         return random.coice('c', 'b')
     else:
         return 'c'
